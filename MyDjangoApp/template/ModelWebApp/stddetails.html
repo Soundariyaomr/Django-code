@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students Information</title>
+    {% load static %}
+</head>
+<body>
+<h1>Batch 2023 Student details</h1>
+<link rel="stylesheet" href="{% static 'css\\SecondWebApp\\ipltable.css' %}">
+<table class="redTable">
+    <tr>
+        <th>Reg No</th>
+        <th>Name</th>
+        <th>Phone No</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Course Name</th>
+        <th>Total Fee</th>
+    </tr>
+    <tr>
+        {% for i in details %}
+        <td>{{i.regNo}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.phno}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.courseName}}</td>
+        <td>{{i.totalFee}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

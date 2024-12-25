@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Details 2023</title>
+    {% load static %}
+</head>
+<body>
+<link rel="stylesheet" href="{% static 'css\\SecondWebApp\\ipltable.css' %}">
+<table class="redTable">
+    <tr>
+        <th>SNO</th>
+        <th>Emp Id</th>
+        <th>Name</th>
+        <th>Phone No</th>
+        <th>Email Address</th>
+        <th>Address</th>
+        <th>Salary</th>
+    </tr>
+    <tr>
+        {% for i in emp %}
+        <td>{{i.id}}</td>
+        <td>{{i.emp_id}}</td>
+        <td>{{i.emp_name}}</td>
+        <td>{{i.emp_phno}}</td>
+        <td>{{i.emp_email}}</td>
+        <td>{{i.emp_address}}</td>
+        <td>{{i.emp_salary}}</td>
+        <td><a href="/curd/updateemp/{{i.id}}">Update</a></td>
+        <td><a href="/curd/deleteemp/{{i.id}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/curd/createempreg/">Create new Employee details</a>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "AlertWebApp\\base.html" %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Alert web page</title>
+
+</head>
+<body>
+<h1>Simple Alert message page</h1>
+<div class="alert message">
+    {% if messages %}
+    {% for msg in messages %}
+    <h1>{{msg}}</h1>
+    {% endfor %}
+    {% endif %}
+    <a href="{% url 'Success' %}">Success</a><br><br>
+    <a href="{% url 'Error' %}">Error</a><br><br>
+    <a href="/alert/warning/">Warning</a><br><br>
+    <a href="/alert/info/">Info</a><br><br>
+</div>
+</body>
+{% endblock %}
+</html>

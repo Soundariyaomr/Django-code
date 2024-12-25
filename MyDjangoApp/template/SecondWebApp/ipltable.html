@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django | IPL Table 2023</title>
+    {% load static %}
+</head>
+<body>
+<h2 style="color:blue;text-align:center">IPL Match 2023</h2>
+<h2 id="name">IPL Match sponsorship by {{name}}</h2>
+<h2 class="country">IPL Match Country {{country}}</h2>
+<h2>IPL Match Location {{Location}}</h2>
+<h2>IPL Match Date {{Date}}</h2>
+<link rel="stylesheet" href="{% static 'css\\SecondWebApp\\ipltable.css' %}">
+<table class="redTable">
+    <tr id="tableheading">
+        <th>Team</th>
+        <th>Match</th>
+        <th>Win</th>
+        <th>Loss</th>
+        <th>NRR</th>
+        <th>Points</th>
+    </tr>
+    <tr class="csk">
+        <td>CSK</td>
+        <td>14</td>
+        <td>12</td>
+        <td>2</td>
+        <td>+890.67</td>
+        <td>20</td>
+    </tr>
+
+    <tr class="mi">
+        <td>MI</td>
+        <td>14</td>
+        <td>11</td>
+        <td>3</td>
+        <td>+880.67</td>
+        <td>19</td>
+    </tr>
+
+</table>
+<img src="{% static 'image\\csk.png' %}">
+</body>
+</html>

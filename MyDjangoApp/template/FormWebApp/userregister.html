@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register page Details</title>
+    {% load static %}
+</head>
+<body>
+<h2>Registered Details</h2>
+<link rel="stylesheet" href="{% static 'css\\SecondWebApp\\ipltable.css' %}">
+<table class="redTable">
+
+
+    <tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Date of Birth</th>
+    </tr>
+
+    <tr>
+        {% for i in reg %}
+        <td>{{i.FirstName}}</td>
+        <td>{{i.LastName}}</td>
+        <td>{{i.Email}}</td>
+        <td>{{i.Password}}</td>
+        <td>{{i.DOB}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
